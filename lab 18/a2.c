@@ -1,22 +1,21 @@
 #include<stdio.h>
+int min(int,int);
 int max(int,int);
-void main(){
-    int a,b,maxvalue;
-    printf("enter the 1st number : ");
-    scanf("%d",&a);
-    printf("enter the 2nd number : ");
-    scanf("%d",&b);
-    maxvalue=max(a,b);
-    printf("maximum number is %d",maxvalue);
+void main()
+{
+    int a,b,maximum,minimum;
+    printf("Enter 2 numbers : ");
+    scanf("%d %d",&a,&b);
+    maximum = max(a,b);
+    minimum = min(a,b);
+    printf("\nMax = %d",maximum);
+    printf("\nMin = %d",minimum);
 }
-int max(int a,int b ){
-    if(a>b){
-        return a;
-    }
-    else{
-        return b;
-    }
+int min(int a,int b)
+{
+    return (a<b)?a:b;
 }
-    
-    
-
+int max(int a,int b)
+{
+    return (a>b)?a:b;
+}
